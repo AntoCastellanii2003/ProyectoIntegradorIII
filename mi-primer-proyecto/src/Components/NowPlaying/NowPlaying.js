@@ -26,7 +26,7 @@ class Nowplaying extends Component {
 
     render(){
         //let cincoPelis = this.state.NowPlayingMovies.slice(0,5)
-        console.log(this.state.TopRatedMovies)
+        console.log(this.state.NowPlayingMovies)
         return (
             <div>
         <h1>hola</h1>

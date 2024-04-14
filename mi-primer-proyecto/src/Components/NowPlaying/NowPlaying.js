@@ -29,7 +29,10 @@ class NowPlaying extends Component {
         console.log(this.state.NowPlayingMovies)
         return (
             <div>
-        <h1>hola</h1>
+                {this.state.NowPlayingMovies.length> 0 ?
+                this.state.NowPlayingMovies.map((elm,idx) => <NowPlayingCard  key = {idx + elm.title} datos = {elm} />)
+                :
+                <h2> Cargando.. </h2>}
             </div>
 
             

@@ -15,7 +15,7 @@ class Search extends Component {
     }
 
     controlarCambios(event){
-        this.setState({valor: event.target.value},
+        this.setState({inputValue: event.target.value},
             ()=>console.log(event),
        //     () => this.props.filtrarPeliculas(this.state.valorInput)
           )
@@ -32,8 +32,8 @@ class Search extends Component {
     render() {
         return (
            <form onSubmit={ (event)=> this.evitarSubmit(event)}>
-            <label>Search Movies:</label>
-            <input type='text' onChange={(event)=> this.controlarCambios(event)} value={this.state.inputValue} placeholder='Search...'/>
+            
+            <input type='text' onChange={(event)=> this.controlarCambios(event)}/>
             <input type= 'submit' value='Submit'/>
             {console.log(this.state.valorInput)}
             </form>

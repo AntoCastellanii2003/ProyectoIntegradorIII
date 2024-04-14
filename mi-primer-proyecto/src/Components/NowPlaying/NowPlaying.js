@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import MovieCard from '../MovieCard/MovieCard'
+import NowPlayingCard from '../TopRatedCard/TopRatedCard'
 
-class Movies extends Component {
+class NowPlaying extends Component {
 
     constructor (props) {
         super(props)
@@ -32,4 +32,4 @@ class Movies extends Component {
 
 
 
-export default Movies;
+export default NowPlaying;

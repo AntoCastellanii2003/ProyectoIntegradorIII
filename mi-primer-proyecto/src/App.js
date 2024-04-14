@@ -1,8 +1,8 @@
 import React from 'react' ;
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
-import MovieCard from  './Components/MovieCard/MovieCard'
-import Movies from './Components/Movies/Movies'
+import TopRatedCard from  './Components/TopRatedCard/TopRatedCard'
+import TopRated from './Components/TopRated/TopRated'
 
 
 function App() {
@@ -21,8 +21,8 @@ function App() {
     <React.Fragment>
     < Header elementosMenu={menu}/>
     
-    <Movies />
-    <MovieCard/>
+    <TopRated />
+    <TopRatedCard/>
    
     
 

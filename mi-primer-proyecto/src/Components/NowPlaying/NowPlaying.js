@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import NowPlayingCard from '../TopRatedCard/TopRatedCard'
 
-class Nowplaying extends Component {
+class NowPlaying extends Component {
 
     constructor (props) {
         super(props)

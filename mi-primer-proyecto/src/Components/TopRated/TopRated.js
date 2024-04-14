@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import TopRatedCard from '../TopRatedCard/TopRatedCard'
+import TopRatedCard from "../TopRatedCard/TopRatedCard";
 
 class TopRated extends Component {
 

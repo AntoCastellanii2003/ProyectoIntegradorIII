@@ -1,5 +1,6 @@
 import React from 'react';
 import Search from "../Search/Search"
+import {Link} from 'react-router-dom'
 
 function Header(props){
 
@@ -7,10 +8,10 @@ function Header(props){
         <div>
         <nav>
             <ul className="main-nav">
-                <li> <link to="/Home"> Home </link></li>
-                <li> <link to="/Favorites"> Favorites </link></li>
-                <li> <link to="/TopRated"> Top rated </link></li>
-                <li> <link to="/NowPlaying"> Now Playing </link></li>
+                <li> <Link to="/"> Home </Link></li>
+                <li> <Link to="/Favorites"> Favorites </Link></li>
+                <li> <Link to="/TopRated"> Top rated </Link></li>
+                <li> <Link to="/NowPlaying"> Now Playing </Link></li>
             </ul>
             <ul className="pageName">
                 <li>The Movie Place <img src="./img/user.jpg" alt=""/></li>

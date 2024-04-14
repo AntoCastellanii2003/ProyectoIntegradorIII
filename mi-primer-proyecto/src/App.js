@@ -10,8 +10,8 @@ function App() {
   let menu = [
     'Home',
     'Favorites',
-    'Ver todas',
-    'menú3',
+    'Top Rated Movies',
+    'Now Playing Movies',
   ]
   
   

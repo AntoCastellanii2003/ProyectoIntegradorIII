@@ -1,8 +1,10 @@
 import React from 'react';
+import Search from "../Search/Search"
 
 function Header(props){
 
     return (
+        <div>
         <nav>
             <ul className="main-nav">
                 { 
@@ -10,10 +12,13 @@ function Header(props){
                     
                 }
             </ul>
-            <ul className="user">
-                <li>Nombre usuario <img src="./img/user.jpg" alt=""/></li>
+            <ul className="pageName">
+                <li>The Movie Place <img src="./img/user.jpg" alt=""/></li>
+                <Search />
             </ul>
         </nav>
+      
+        </div>
     )
 }
 

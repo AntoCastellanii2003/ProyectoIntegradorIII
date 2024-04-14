@@ -14,16 +14,13 @@ class Home extends Component {
     render() {
       return (
         <main>
-  
           <section>
             <h1 className="TitleHome">TOP RATED</h1>
             <TopRated />
             <h1 className="TitleHome">NOW PLAYING</h1>
             <NowPlaying />
-           
           </section>
         </main>
-      
       );
     }
    

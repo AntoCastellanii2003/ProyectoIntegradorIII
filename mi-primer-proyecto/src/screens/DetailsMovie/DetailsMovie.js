@@ -11,4 +11,4 @@ function ScreenMovieDetails(props){
     )
 }
 
-export default ScreenMovieDetails
+export default ScreenMovieDetails;

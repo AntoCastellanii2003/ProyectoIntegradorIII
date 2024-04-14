@@ -25,12 +25,12 @@ class NowPlaying extends Component {
     
 
     render(){
-        //let cincoPelis = this.state.NowPlayingMovies.slice(0,5)
+        let cincoPelis = this.state.NowPlayingMovies.slice(0,5)
         console.log(this.state.NowPlayingMovies)
         return (
             <div>
-                {this.state.NowPlayingMovies.length> 0 ?
-                this.state.NowPlayingMovies.map((elm,idx) => <NowPlayingCard  key = {idx + elm.title} datos = {elm} />)
+                {cincoPelis.length> 0 ?
+                cincoPelis.map((elm,idx) => <NowPlayingCard  key = {idx + elm.title} datos = {elm} />)
                 :
                 <h2> Cargando.. </h2>}
             </div>
@@ -41,10 +41,7 @@ class NowPlaying extends Component {
 
 }
 
-//{this.state.NowPlayingMovies.length> 0 ?
-//this.state.NowPlayingMovies.map((elm,idx) => <NowPlayingCard  key = {idx + elm.title} datos = {elm} />)
-//:
-//<h2> Cargando.. </h2>}
+
 
 
 export default NowPlaying;

@@ -27,12 +27,12 @@ class TopRated extends Component {
     //     ))
 
     render(){
-        //let cincoPelis = this.state.TopRated.slice(0,5)
+        let cincoPelis = this.state.TopRatedMovies.slice(0,5)
         console.log(this.state.TopRatedMovies)
         return (
             <div>   
-        {this.state.TopRatedMovies.length> 0 ?  
-        this.state.TopRatedMovies.map((elm,idx) => <TopRatedCard  key = {idx + elm.title} datos = {elm} />)
+        {cincoPelis.length> 0 ?  
+        cincoPelis.map((elm,idx) => <TopRatedCard  key = {idx + elm.title} datos = {elm} />)
         :
         <h2> Cargando.. </h2>}
             </div>

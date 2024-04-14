@@ -1,5 +1,5 @@
 import { Component } from 'react'
-
+import SearchCard from '../SearchCard/SearchCard';
 
 class Search extends Component {
     constructor(props) {
@@ -7,8 +7,22 @@ class Search extends Component {
         this.state = { 
             inputValue: "",
             Movies: [],
+            MoviesFiltradas : []
     };
     }
+
+    componentDidMount(){
+        fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=5c3c9ca0d0ef3d9df2c3f65cc0421b97")
+        .then(resp => resp.json()) 
+        .then(data =>this.setState( 
+               {Movies : data.results}
+                )
+                )
+            
+       .catch((err)=> console.log(err))
+     
+    }
+
 
     evitarSubmit(event){
         event.preventDefault();
@@ -25,18 +39,25 @@ class Search extends Component {
         let FilterMovies = this.state.Movies.filter(
             (elm)=>elm.name.toLowerCase().includes(this.state.inputValue.toLowerCase()))
             this.setState({
-                Movies: FilterMovies
+                MoviesFiltradas: FilterMovies
             })
       } 
     
     render() {
+        this.state.MoviesFiltradas.length> 0 ?
+            this.state.MoviesFiltradas.map((elm,idx) => <SearchCard  key = {idx + elm.title} datos = {elm} />)
+            :
+            <h2> Cargando... </h2>
         return (
+            <div>
            <form onSubmit={ (event)=> this.evitarSubmit(event)}>
             
-            <input type='text' onChange={(event)=> this.controlarCambios(event)}/>
+            <input type='text' onChange={(event)=> this.controlarCambios(event)} value={this.state.valorInput} placeholder="Buscar..."/>
             <input type= 'submit' value='Submit'/>
             {console.log(this.state.valorInput)}
             </form>
+           
+                </div>
         );
     }
 }

@@ -11,7 +11,7 @@ class TopRated extends Component {
     }
 
     componentDidMount(){
-        fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=5c3c9ca0d0ef3d9df2c3f65cc0421b97")
+        fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=5c3c9ca0d0ef3d9df2c3f65cc0421b97")
         .then(resp => resp.json()) 
         .then(data =>this.setState( 
                {TopRatedMovies : data.results}

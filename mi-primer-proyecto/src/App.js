@@ -6,7 +6,8 @@ import ScreenMovieDetails from './screens/DetailsMovie/DetailsMovie';
 import ScreenNowPlaying from './screens/NowPlaying/NowPlaying';
 import ScreenTopRated from './screens/TopRated/TopRated';
 import Home from './screens/Home/Home';
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom'
+import NotFound from './screens/NotFound/Notfound';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route path="/TopRated"  component={ScreenTopRated}/>
       <Route path="/NowPlaying" component={ScreenNowPlaying}/>
       <Route path="/Favorites" component={ScreenFavorites}/>
+      <Route component={NotFound}/>
       
     </Switch>
    

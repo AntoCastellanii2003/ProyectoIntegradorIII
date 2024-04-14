@@ -3,24 +3,13 @@ import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
 import TopRatedCard from  './Components/TopRatedCard/TopRatedCard'
 import TopRated from './Components/TopRated/TopRated'
-import {Route} from 'react-router-dom'
-import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import {Route, Switch} from 'react-router-dom'
+
 
 function App() {
- 
-  let menu = [
-    'Home',
-    'Favorites',
-    'Top Rated Movies',
-    'Now Playing Movies',
-  ]
-  
-  
-
-
   return (
     <React.Fragment>
-    < Header elementosMenu={menu}/>
+    < Header/>
     
     <Switch>
       <Route path="/" exact={true} component={Home}/>
@@ -28,6 +17,7 @@ function App() {
       <Route path="/TopRated"  component={ScreenTopRated}/>
       <Route path="/NowPlaying" component={ScreenNowPlaying}/>
       <Route path="/Favorites" component={Favorites}/>
+      <Route component={NotFound}/>
     </Switch>
    
     

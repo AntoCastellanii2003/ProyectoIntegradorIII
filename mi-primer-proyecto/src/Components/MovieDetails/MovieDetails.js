@@ -10,7 +10,6 @@ class MovieDetails extends Component {
             }
             
         }
-        {/* PREGUNTAR SOBRE ESTO!!! */}
     }
 
     componentDidMount() {
@@ -30,19 +29,22 @@ class MovieDetails extends Component {
 
 
     render() {
-        
+        console.log(this.state.movie);
         return (
-            
             <div>
-                {console.log(this.state.movie)}
-                <img src={`https://image.tmdb.org/t/p/w500/${this.state.movie.poster_path}/images`} alt={this.state.movie.title}></img>
-                <p> {this.state.movie.title}</p>
-                {console.log(this.state.movie.data)}
-                <p> Genres: </p> {this.state.movie.genres.map((elm, idx) => elm.name)} {/* PREGUNTAR SOBRE ESTO!!! */}
-                <p> Sinopsis: {this.state.movie.overview}: </p>
-                <p> Rating: {this.state.movie.popularity}</p>
-                <p> Release date: {this.state.movie.release_date}</p>
-                <p> Movie length: {this.state.movie.runtime}</p>
+                {this.state.movie.genres.length> 0 ?
+                <article>
+                    <h1> {this.state.movie.title}</h1>
+                    <img src={`https://image.tmdb.org/t/p/w500/${this.state.movie.poster_path}/images`} alt={this.state.movie.title}></img>
+                    <p> Sinopsis: {this.state.movie.overview}: </p>
+                    <p> Genres:  {this.state.movie.genres.map((elm, idx) => elm.name + ", ")}</p>
+                    <p> Rating: {this.state.movie.popularity}</p>
+                    <p> Release date: {this.state.movie.release_date}</p>
+                    <p> Movie length: {this.state.movie.runtime}</p>
+                </article>
+                :
+            <h2> Cargando.. </h2>
+            }
             </div>
         )
     }

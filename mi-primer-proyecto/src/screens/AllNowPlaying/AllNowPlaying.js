@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import TodasNowPlayingCard from "../../Components/TodasNowPlayingCard/TodasNowPlayingCard"
+import TodasNowPlaying from "../../Components/TodasNowPlaying/TodasNowPlaying"
 
 
 class AllNowPlaying extends Component {

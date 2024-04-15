@@ -2,7 +2,7 @@ import React from 'react' ;
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
 import ScreenFavorites from './screens/Favorites/Favorites';
-import ScreenMovieDetails from './screens/DetailsMovie/DetailsMovie';
+import ScreenMovieDetails from './screens/MovieDetails/ScreenMovieDetails';
 import ScreenNowPlaying from './screens/AllNowPlaying/AllNowPlaying';
 import ScreenTopRated from './screens/TopRated/TopRated';
 import Home from './screens/Home/Home';

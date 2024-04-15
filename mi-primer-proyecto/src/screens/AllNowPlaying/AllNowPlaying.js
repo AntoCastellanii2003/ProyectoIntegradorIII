@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import TodasNowPlaying from "../../Components/TodasNowPlaying/TodasNowPlaying"
-import Search from "../../Components/Search/Search";
+import Search from "../../Components/Form/Form";
 
 
 class AllNowPlaying extends Component {

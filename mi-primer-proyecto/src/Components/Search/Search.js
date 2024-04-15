@@ -1,5 +1,7 @@
 import { Component } from 'react'
 import SearchCard from '../SearchCard/SearchCard';
+import {Link} from 'react-router-dom'
+
 
 class Search extends Component {
     constructor(props) {
@@ -54,7 +56,9 @@ class Search extends Component {
            <form onSubmit={ (event)=> this.evitarSubmit(event)}>
             
             <input type='text' onChange={(event)=> this.controlarCambios(event)} value={this.state.valorInput} placeholder="Buscar..."/>
-            <input type= 'submit' value='Submit' />
+            <Link to={`/SearchResults/${this.state.inputValue}`}>
+                <button type="submit">Submit</button>
+            </Link>
             {console.log(this.state.valorInput)}
             </form>
            
@@ -63,8 +67,51 @@ class Search extends Component {
     }
 }
 
+
+
+
 //{<SearchResults value= {this.state.valor}/>}
 
 export default Search
 
+/* 
+import { Component } from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import './formbusqueda.css'
 
+class FormBusqueda extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            valorInput: ''
+        }
+    }
+
+    evitarSubmit(event){
+        event.preventDefault()
+    }
+
+    guardarValor(event){
+        this.setState({
+            valorInput: event.target.value
+        },
+        ()=> this.props.filtrarPeliculas(this.state.valorInput))
+    }
+
+    render(){
+        return(
+            <form
+                onSubmit={(event)=> this.evitarSubmit(event)}
+            >
+                <input
+                onChange={(event)=> this.guardarValor(event)}
+                placeholder="Busca una pelicula" />
+                <Link to={`/resultadosBusqueda/${this.state.valorInput}`}>
+                    <button type="submit">Buscar</button>
+                </Link>
+            </form>
+        )
+    }
+}
+
+export default FormBusqueda */

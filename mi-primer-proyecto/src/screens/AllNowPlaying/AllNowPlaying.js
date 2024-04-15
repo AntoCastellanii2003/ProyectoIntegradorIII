@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import TodasNowPlaying from "../../Components/TodasNowPlaying/TodasNowPlaying"
+import Search from "../../Components/Search/Search";
 
 
 class AllNowPlaying extends Component {
@@ -13,6 +14,7 @@ class AllNowPlaying extends Component {
     render() {
       return (
         <main>
+          <Search history= {this.props.history} />
           <section>
             <h1 className="TitleHome">NOW PLAYING</h1>
               < TodasNowPlaying />

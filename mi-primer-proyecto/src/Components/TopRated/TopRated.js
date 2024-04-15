@@ -43,10 +43,7 @@ class TopRated extends Component {
 
 }
 
-//{this.state.TopRatedMovies.length> 0 ?
-//this.state.TopRatedMovies.map((elm,idx) => <TopRatedCard  key = {idx + elm.title} datos = {elm} />)
-//:
-//<h2> Cargando.. </h2>}
+
 
 
 export default TopRated;

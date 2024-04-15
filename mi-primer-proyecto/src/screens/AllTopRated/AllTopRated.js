@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import TodasTopRated from "../../Components/TodasTopRated/TodasTopRated"
+import TodasTopRated from "../../Components/TodasTopRated/TodasTopRated";
+import Search from "../../Components/Search/Search";
 
 
 class AllTopRated extends Component {
@@ -13,6 +14,7 @@ class AllTopRated extends Component {
     render() {
       return (
         <main>
+          <Search history= {this.props.history} />
           <section>
             <h1 className="TitleHome">NOW PLAYING</h1>
               < TodasTopRated />

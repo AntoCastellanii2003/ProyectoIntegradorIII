@@ -7,7 +7,8 @@ class TodasTopRated extends Component {
     constructor (props) {
         super(props)
         this.state = {
-            TopRatedMovies: []
+            TopRatedMovies: [],
+            Page: 1
         }
     }
 
@@ -40,4 +41,3 @@ class TodasTopRated extends Component {
 
 
 export default TodasTopRated
-

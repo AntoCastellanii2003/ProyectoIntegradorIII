@@ -15,7 +15,7 @@ function Header(props){
             </ul>
             <ul className="pageName">
                 <li>The Movie Place <img src="./img/user.jpg" alt=""/></li>
-                <Search />
+                
             </ul>
         </nav>
       

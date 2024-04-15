@@ -16,7 +16,7 @@ class AllNowPlaying extends Component {
           <section>
             <h1 className="TitleHome">NOW PLAYING</h1>
               < TodasNowPlayingCard />
-              <button> Ver Mas</button>
+              <button> Buscar Mas</button>
           </section>
         </main>
       );

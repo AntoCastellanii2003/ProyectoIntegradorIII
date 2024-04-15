@@ -3,6 +3,7 @@ import SearchCard from '../SearchCard/SearchCard';
 
 class Search extends Component {
     constructor(props) {
+        console.log('props header',props)
         super(props);
         this.state = { 
             inputValue: "",
@@ -53,7 +54,7 @@ class Search extends Component {
            <form onSubmit={ (event)=> this.evitarSubmit(event)}>
             
             <input type='text' onChange={(event)=> this.controlarCambios(event)} value={this.state.valorInput} placeholder="Buscar..."/>
-            <input type= 'submit' value='Submit'/>
+            <input type= 'submit' value='Submit' />
             {console.log(this.state.valorInput)}
             </form>
            

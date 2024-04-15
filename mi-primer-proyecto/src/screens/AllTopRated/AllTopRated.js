@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import TodasTopRatedCard from "../../Components/TodasTopRatedCard/TodasTopRatedCard"
+import TodasTopRated from "../../Components/TodasTopRated/TodasTopRated"
 
 
 class AllTopRated extends Component {
@@ -15,8 +15,8 @@ class AllTopRated extends Component {
         <main>
           <section>
             <h1 className="TitleHome">NOW PLAYING</h1>
-              < TodasTopRatedCard />
-              <button> Ver Mas</button>
+              < TodasTopRated />
+              <button> Cargar Mas</button>
           </section>
         </main>
       );

@@ -3,6 +3,7 @@ import TopRated from "../../Components/TopRated/TopRated";
 import NowPlaying from "../../Components/NowPlaying/NowPlaying";
 import home from "./home.css";
 import {Link} from 'react-router-dom'
+import Search from "../../Components/Search/Search";
 
 class Home extends Component {
     constructor(props) {
@@ -15,6 +16,7 @@ class Home extends Component {
     render() {
       return (
         <main>
+          <Search history= {this.props.history} />
           <section>
           <h1 className="TitleHome"><Link to="/AllTopRated"> TOP RATED </Link></h1>
             <TopRated />

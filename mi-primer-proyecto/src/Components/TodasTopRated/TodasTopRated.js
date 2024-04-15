@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import TodasTopRatedCard from "../TodasTopRatedCard/TodasTopRatedCard";
+import todasTopRated from "./todasTopRated.css";
 
 class TodasTopRated extends Component {
 
@@ -24,7 +25,7 @@ class TodasTopRated extends Component {
         let peliculas = this.state.TopRatedMovies
         console.log(this.state.TopRatedMovies)
         return (
-            <div>   
+            <div className="todas-top-rated-container">   
         {peliculas.length> 0 ?  
         peliculas.map((elm,idx) => <TodasTopRatedCard  key = {idx + elm.title} datos = {elm} />)
         :

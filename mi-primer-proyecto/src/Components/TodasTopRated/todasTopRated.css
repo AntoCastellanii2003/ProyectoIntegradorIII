@@ -1,0 +1,9 @@
+/* Estilo para el componente TodasTopRated */
+
+/* Contenedor principal */
+.todas-top-rated-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  

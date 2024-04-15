@@ -36,11 +36,11 @@ class MovieDetails extends Component {
                 <article>
                     <h1> {this.state.movie.title}</h1>
                     <img src={`https://image.tmdb.org/t/p/w500/${this.state.movie.poster_path}/images`} alt={this.state.movie.title}></img>
-                    <p> Sinopsis: {this.state.movie.overview}: </p>
-                    <p> Genres:  {this.state.movie.genres.map((elm, idx) => elm.name + ", ")}</p>
-                    <p> Rating: {this.state.movie.popularity}</p>
-                    <p> Release date: {this.state.movie.release_date}</p>
-                    <p> Movie length: {this.state.movie.runtime}</p>
+                     <h3>Sinopsis: </h3><p> {this.state.movie.overview}: </p>
+                     <h3>Genres: </h3><p> {this.state.movie.genres.map((elm, idx) => elm.name + ", ")}</p>
+                     <h3>Ratings: </h3><p> {this.state.movie.popularity}</p>
+                     <h3>Release date:</h3><p>{this.state.movie.release_date}</p>
+                     <h3>Movie length:  </h3><p> {this.state.movie.runtime}</p>
                 </article>
                 :
             <h2> Cargando.. </h2>

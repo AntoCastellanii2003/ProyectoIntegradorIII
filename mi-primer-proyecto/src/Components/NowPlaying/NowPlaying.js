@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import NowPlayingCard from '../TopRatedCard/TopRatedCard'
+import NowPlayingCard from '../TopRatedCard/TopRatedCard';
+import nowplaying from "./nowplaying.css";
 
 class NowPlaying extends Component {
 
@@ -25,12 +26,12 @@ class NowPlaying extends Component {
     
 
     render(){
-        let cincoPelis = this.state.NowPlayingMovies.slice(0,5)
+        
         console.log(this.state.NowPlayingMovies)
         return (
-            <div>
-                {cincoPelis.length> 0 ?
-                cincoPelis.map((elm,idx) => <NowPlayingCard  key = {idx + elm.title} datos = {elm} />)
+            <div className="nowPlaying">
+                {this.state.NowPlayingMovies.length> 0 ?
+                this.state.NowPlayingMovies.map((elm,idx) => <NowPlayingCard  key = {idx + elm.title} datos = {elm} />)
                 :
                 <h2> Cargando.. </h2>}
             </div>

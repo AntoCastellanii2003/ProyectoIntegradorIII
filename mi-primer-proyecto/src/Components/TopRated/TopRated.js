@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import TopRatedCard from "../TopRatedCard/TopRatedCard";
+import toprated from "./toprated.css"
 
 class TopRated extends Component {
 
@@ -30,7 +31,7 @@ class TopRated extends Component {
         let cincoPelis = this.state.TopRatedMovies.slice(0,5)
         console.log(this.state.TopRatedMovies)
         return (
-            <div>   
+            <div className="topRated">   
         {cincoPelis.length> 0 ?  
         cincoPelis.map((elm,idx) => <TopRatedCard  key = {idx + elm.title} datos = {elm} />)
         :

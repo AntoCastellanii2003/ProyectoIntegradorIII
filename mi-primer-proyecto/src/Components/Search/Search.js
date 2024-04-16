@@ -42,7 +42,7 @@ class Search extends Component{
         { this.state.Movies.length> 0 ?
             this.state.Movies.map((elm,idx) => <SearchCard  key = {idx + elm.title} datos = {elm} />)
             :
-            <h2> Cargando... </h2>}
+            <h2> No hay ningun pelicula relacionada a lo ingresado </h2>}
             <article/>
    
        </article>)}

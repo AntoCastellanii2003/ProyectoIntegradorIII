@@ -39,14 +39,14 @@ class Form extends Component {
           )
     }
 
-    FilterMovies(inputValue){
+   /*  FilterMovies(inputValue){
         let FilterMovies = this.state.Movies.filter(
             (elm)=>elm.name.toLowerCase().includes(this.state.inputValue.toLowerCase()))
             this.setState({
                 MoviesFiltradas: FilterMovies
             })
       } 
-    
+     */
     render() {
      
             

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import TodasTopRated from "../../Components/TodasTopRated/TodasTopRated";
-import Search from "../../Components/Search/Search";
+import Search from "../../Components/Form/Form";
 
 
 class AllTopRated extends Component {

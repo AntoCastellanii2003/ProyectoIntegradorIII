@@ -1,21 +1,19 @@
-import { Component } from 'react'
-import SearchCard from '../SearchCard/SearchCard';
-import {Link} from 'react-router-dom'
+import React, {Component} from 'react'
+import SearchCard from '../SearchCard.js/SearchCard'
 
+class Search extends Component{
 
-class Search extends Component {
-    constructor(props) {
-        console.log('props header',props)
-        super(props);
-        this.state = { 
-            inputValue: "",
-            Movies: [],
-            MoviesFiltradas : []
-    };
+    constructor(props){
+        super(props)
+        this.state = {
+                Movies: [],
+                MoviesFiltradas: []
+        }
+        console.log('params', props)
     }
 
     componentDidMount(){
-        fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=5c3c9ca0d0ef3d9df2c3f65cc0421b97")
+        fetch(`https://api.themoviedb.org/3/search/movie?query=${this.props.match.params.search}&api_key=5c3c9ca0d0ef3d9df2c3f65cc0421b97`)
         .then(resp => resp.json()) 
         .then(data =>this.setState( 
                {Movies : data.results}
@@ -27,91 +25,28 @@ class Search extends Component {
     }
 
 
-    evitarSubmit(event){
-        event.preventDefault();
-    }
 
-    controlarCambios(event){
-        this.setState({inputValue: event.target.value},
-            ()=>console.log(event),
-       //     () => this.props.filtrarPeliculas(this.state.valorInput)
-          )
-    }
-
-    FilterMovies(valorInput){
+  /*   FilterMovies(inputValue){
         let FilterMovies = this.state.Movies.filter(
             (elm)=>elm.name.toLowerCase().includes(this.state.inputValue.toLowerCase()))
             this.setState({
                 MoviesFiltradas: FilterMovies
             })
-      } 
-    
-    render() {
-        this.state.MoviesFiltradas.length> 0 ?
-            this.state.MoviesFiltradas.map((elm,idx) => <SearchCard  key = {idx + elm.title} datos = {elm} />)
+      }  */
+
+    render()
+     { 
+        console.log(this.props.datos) 
+    return(
+        <article>
+        { this.state.Movies.length> 0 ?
+            this.state.Movies.map((elm,idx) => <SearchCard  key = {idx + elm.title} datos = {elm} />)
             :
-            <h2> Cargando... </h2>
-        return (
-            <div>
-           <form onSubmit={ (event)=> this.evitarSubmit(event)}>
-            
-            <input type='text' onChange={(event)=> this.controlarCambios(event)} value={this.state.valorInput} placeholder="Buscar..."/>
-            <Link to={`/SearchResults/${this.state.inputValue}`}>
-                <button type="submit">Submit</button>
-            </Link>
-            {console.log(this.state.valorInput)}
-            </form>
-           
-                </div>
-        );
-    }
+            <h2> No hay ningun pelicula relacionada a lo ingresado </h2>}
+            <article/>
+   
+       </article>)}
 }
+        
+export default Search;
 
-
-
-
-//{<SearchResults value= {this.state.valor}/>}
-
-export default Search
-
-/* 
-import { Component } from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import './formbusqueda.css'
-
-class FormBusqueda extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            valorInput: ''
-        }
-    }
-
-    evitarSubmit(event){
-        event.preventDefault()
-    }
-
-    guardarValor(event){
-        this.setState({
-            valorInput: event.target.value
-        },
-        ()=> this.props.filtrarPeliculas(this.state.valorInput))
-    }
-
-    render(){
-        return(
-            <form
-                onSubmit={(event)=> this.evitarSubmit(event)}
-            >
-                <input
-                onChange={(event)=> this.guardarValor(event)}
-                placeholder="Busca una pelicula" />
-                <Link to={`/resultadosBusqueda/${this.state.valorInput}`}>
-                    <button type="submit">Buscar</button>
-                </Link>
-            </form>
-        )
-    }
-}
-
-export default FormBusqueda */

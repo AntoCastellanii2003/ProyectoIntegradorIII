@@ -1,5 +1,5 @@
 import React from 'react';
-import Search from "../../Components/Search/Search";
+import Search from "../../Components/Form/Form";
 
 
 function NotFound(props){

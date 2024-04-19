@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-
+import nowplayingcard from "./nowplayingCard.css";
 
 class NowPlayingCard extends Component{
 

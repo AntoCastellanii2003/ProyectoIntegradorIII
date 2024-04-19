@@ -1,7 +1,7 @@
-/* .NowPlayingCard{
-
-} */
-
-.imgcard{
-    margin: 15px;
+.NowPlayingCard{
+    width: 10px;
+    height: 15px;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
 }

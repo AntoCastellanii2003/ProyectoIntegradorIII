@@ -1,6 +1,9 @@
 .topRated{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        
+    
 }

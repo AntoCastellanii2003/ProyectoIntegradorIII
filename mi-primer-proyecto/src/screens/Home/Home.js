@@ -16,7 +16,7 @@ class Home extends Component {
 
     render() {
       return (
-        <main>
+        <main className="homeGeneral">
           <Form history= {this.props.history} />
           <section>
           <h1 className="TitleHome"><Link to="/AllTopRated"> TOP RATED </Link></h1>

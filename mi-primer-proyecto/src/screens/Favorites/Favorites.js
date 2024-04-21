@@ -5,10 +5,7 @@ import Search from "../../Components/Form/Form";
 function ScreenFavorites(props){
 
     return (
-        <div>
-      {/*  <Search history= {this.props.history} /> */}
-      
-        </div>
+        <Favorites />
     )
 }
 

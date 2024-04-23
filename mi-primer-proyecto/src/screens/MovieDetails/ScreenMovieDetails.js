@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import MovieDetails from '../../Components/MovieDetails/MovieDetails';
 
-
-
 class ScreenMovieDetails extends Component {
     constructor(props) {
         super(props)

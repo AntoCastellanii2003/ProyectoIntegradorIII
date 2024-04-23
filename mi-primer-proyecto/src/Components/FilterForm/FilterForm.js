@@ -1,6 +1,4 @@
 import { Component } from 'react'
-import SearchCard from '../Search/Search';
-import {Link} from 'react-router-dom'
 
 
 class Form extends Component {

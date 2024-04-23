@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import NowPlayingCard from '../TopRatedCard/TopRatedCard';
 import "./nowplaying.css";
-import nowplaying from "./nowplaying.css";
 import Loader from "../Loader/Loader";
 
 class NowPlaying extends Component {

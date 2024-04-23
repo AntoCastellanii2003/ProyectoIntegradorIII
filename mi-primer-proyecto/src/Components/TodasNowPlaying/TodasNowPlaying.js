@@ -1,6 +1,8 @@
+
 import React, {Component} from 'react';
 import TodasNowPlayingCard from "../TodasNowPlayingCard/TodasNowPlayingCard";
 import Loader from '../Loader/Loader'
+
 
 class TodasNowPlaying extends Component {
 
@@ -9,6 +11,7 @@ class TodasNowPlaying extends Component {
         this.state = {
             NowPlayingMovies: [],
             Page: 1,
+            filtro: ""
         }
     }
 
@@ -24,19 +27,26 @@ class TodasNowPlaying extends Component {
     componentDidMount(){
         this.traerInfo(1)
     }
-
+    
+    filtro() {
+        let filtradas = this.state.NowPlayingMovies.filter(elm => elm.title.toLowerCase().includes(this.state.filtro.toLowerCase()))
+        this.setState({ NowPlayingMovies: filtradas })
+    }
+ 
     render(){
-        
+        let peliculas = this.state.NowPlayingMovies
         console.log(this.state.NowPlayingMovies)
         return (
             <>
-                <div>   
+                <input onChange={(e) => this.setState({ filtro: e.target.value }, () => this.filtro()) } type="text" placeholder="Buscar Pelicula" />
+            
+                <div className="todas-top-rated-container">   
                     {
-                        this.state.NowPlayingMovies.length> 0 ?  
-                        this.state.NowPlayingMovies.map((elm,idx) => <TodasNowPlayingCard  key = {idx + elm.title} datos = {elm} />) :
+                        peliculas.length > 0 ?  
+                        peliculas.map((elm,idx) => <TodasNowPlayingCard  key = {idx + elm.title} datos = {elm} />) :
                         <h2> <Loader/> </h2>
                     }
-                </div>
+                </div>    
                 <button onClick={() => {
                     let npage = this.state.Page;
                     npage = npage + 1
@@ -46,12 +56,7 @@ class TodasNowPlaying extends Component {
             </>
         )
     }
-
 }
 
 
-
-
 export default TodasNowPlaying
-
-

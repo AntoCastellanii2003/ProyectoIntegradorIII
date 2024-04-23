@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import TodasTopRatedCard from "../TodasTopRatedCard/TodasTopRatedCard";
 import todasTopRated from "./todasTopRated.css";
 import Loader from '../Loader/Loader';
-import  todasTopRated from "./todasTopRated.css";
+
 
 class TodasTopRated extends Component {
 

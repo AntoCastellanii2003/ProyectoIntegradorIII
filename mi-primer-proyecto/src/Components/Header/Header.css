@@ -2,13 +2,13 @@
     display: flex;
     justify-content: space-evenly;
     width: 50%;
-    background-color: #2e2e2e;
+    background-color: grey;
     border: 0%;
     align-items: left
 }
 
 .pageName{
-    background-color: #2e2e2e;
+    background-color: grey;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -18,6 +18,6 @@
 }
 
 .navHeader{
-    background-color: #2e2e2e;
+    background-color: grey;
     color: aliceblue;
 }

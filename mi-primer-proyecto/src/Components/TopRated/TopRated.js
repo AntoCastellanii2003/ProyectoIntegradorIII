@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TopRatedCard from "../TopRatedCard/TopRatedCard";
 import toprated from "./toprated.css"
+import Loader from "../Loader/Loader";
 
 class TopRated extends Component {
 
@@ -33,7 +34,7 @@ class TopRated extends Component {
                     {cincoPelis.length > 0 ?
                         cincoPelis.map((elm, idx) => <TopRatedCard key={idx + elm.title} datos={elm} />)
                         :
-                        <h2> Cargando.. </h2>}
+                        <h2> <Loader/> </h2>}
                 </div>
             </>
 

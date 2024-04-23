@@ -34,7 +34,7 @@ class TopRatedCard extends Component{
                 </Link>
                 {
                     this.state.showMore ?
-                    <p>{this.props.datos.overview}</p> :
+                    <p className='showMore'>{this.props.datos.overview}</p> :
                     null
                 }
                 {

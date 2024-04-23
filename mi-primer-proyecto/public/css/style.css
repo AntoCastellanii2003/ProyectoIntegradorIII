@@ -10,12 +10,11 @@ li {
 }
 a {
     text-decoration: none;
-    color: #000;
+    color: white
 }
 body {
     font-family: Nunito;
     margin: 0;
-    background-color: #eee;
     padding-bottom: 150px;
 }
 
@@ -26,8 +25,6 @@ nav{
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 20px;
-    background-color: #4e73df;
-    color: #fff
 }
 
 nav ul {
@@ -71,12 +68,10 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    color: #666;
 }
 .data-detail {
     width: 32%;
     border-radius: 4px;
-    background-color: #fff;
     padding: 10px 30px;
     text-transform: capitalize;
     display: flex;
@@ -112,11 +107,9 @@ main {
 
 /* footer */
 footer {
-    background-color: black;
     text-align: center;
     padding: 40px 0;
-    color: #666;
-    position: fixed;
     bottom: 0;
     width: 100%;
+    background-color: grey;
 }

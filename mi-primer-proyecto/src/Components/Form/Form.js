@@ -1,4 +1,5 @@
-import { Component } from 'react'
+import { Component } from 'react';
+import "./Form.css";
 
 
 class Form extends Component {
@@ -26,12 +27,12 @@ class Form extends Component {
      
             
         return (
-            <div>
+            <div className="formContainer">
 
-                <form onSubmit={(event) => this.evitarSubmit(event)}>
+                <form className="searchForm" onSubmit={(event) => this.evitarSubmit(event)}>
 
-                    <input type='text' onChange={(event) => this.controlarCambios(event)} value={this.state.valorInput} placeholder="Buscar..." />
-                    <button type="submit">Submit</button>
+                    <input type='text' className="searchInput" onChange={(event) => this.controlarCambios(event)} value={this.state.valorInput} placeholder="Buscar..." />
+                    <button type="submit"className="searchButton">Submit</button>
                     {console.log(this.state.valorInput)}
                 </form>
 

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NowPlayingCard from '../TopRatedCard/TopRatedCard';
 import nowplaying from "./nowplaying.css";
+import Loader from "../Loader/Loader";
 
 class NowPlaying extends Component {
 
@@ -33,7 +34,7 @@ class NowPlaying extends Component {
                 {cincoPelis.length> 0 ?
                 cincoPelis.map((elm,idx) => <NowPlayingCard  key = {idx + elm.title} datos = {elm} />)
                 :
-                <h2> Cargando.. </h2>}
+                <h2> <Loader/> </h2>}
             </div>
 
             

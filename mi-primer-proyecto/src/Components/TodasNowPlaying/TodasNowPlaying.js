@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import TodasNowPlayingCard from "../TodasNowPlayingCard/TodasNowPlayingCard";
+import Loader from '../Loader/Loader'
 
 class TodasNowPlaying extends Component {
 
@@ -33,7 +34,7 @@ class TodasNowPlaying extends Component {
                     {
                         this.state.NowPlayingMovies.length> 0 ?  
                         this.state.NowPlayingMovies.map((elm,idx) => <TodasNowPlayingCard  key = {idx + elm.title} datos = {elm} />) :
-                        <h2> Cargando.. </h2>
+                        <h2> <Loader/> </h2>
                     }
                 </div>
                 <button onClick={() => {

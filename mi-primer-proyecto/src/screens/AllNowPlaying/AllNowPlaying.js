@@ -15,7 +15,7 @@ class AllNowPlaying extends Component {
       return (
         <main>
           <section>
-            <h1 className="TitleHome">NOW PLAYING</h1>
+            <h1 className="TitleHome">NOW PLAYING MOVIES</h1>
               < TodasNowPlaying />
           </section>
         </main>

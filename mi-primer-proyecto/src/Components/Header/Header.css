@@ -1,0 +1,23 @@
+.main-nav{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    background-color: #2e2e2e;
+    border: 0%;
+    align-items: left
+}
+
+.pageName{
+    background-color: #2e2e2e;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    justify-content: space-around;
+    align-items: left
+}
+
+.navHeader{
+    background-color: #2e2e2e;
+    color: aliceblue;
+}

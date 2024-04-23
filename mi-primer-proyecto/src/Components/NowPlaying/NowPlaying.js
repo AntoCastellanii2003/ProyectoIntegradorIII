@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NowPlayingCard from '../TopRatedCard/TopRatedCard';
-import nowplaying from "./nowplaying.css";
+import "./nowplaying.css";
 
 class NowPlaying extends Component {
 

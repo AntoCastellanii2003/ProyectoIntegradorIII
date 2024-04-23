@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import "./nowplayingcard.css";
 
 class NowPlayingCard extends Component {
     constructor(props) {

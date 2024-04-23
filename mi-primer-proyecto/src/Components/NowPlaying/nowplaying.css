@@ -1,6 +1,5 @@
 .nowPlaying{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    justify-content: space-between; 
+    flex-wrap: nowrap; 
 }

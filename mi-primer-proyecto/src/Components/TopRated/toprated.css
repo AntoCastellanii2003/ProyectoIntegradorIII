@@ -1,9 +1,6 @@
-.topRated{
-    
+.topRated {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        
-    
+        justify-content: space-between; /* Para distribuir el espacio entre las películas */
+        flex-wrap: nowrap; /* Evitar que las películas se envuelvan a la siguiente línea */
 }
+

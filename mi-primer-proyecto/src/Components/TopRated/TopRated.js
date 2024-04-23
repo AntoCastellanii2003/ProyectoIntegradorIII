@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import TopRatedCard from "../TopRatedCard/TopRatedCard";
-import toprated from "./toprated.css"
+import "./toprated.css"
 
 class TopRated extends Component {
 

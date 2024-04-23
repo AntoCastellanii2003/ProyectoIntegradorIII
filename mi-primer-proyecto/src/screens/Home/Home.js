@@ -3,6 +3,7 @@ import TopRated from "../../Components/TopRated/TopRated";
 import NowPlaying from "../../Components/NowPlaying/NowPlaying";
 import {Link} from 'react-router-dom'
 import Form from "../../Components/Form/Form";
+import "./home.css"
 
 class Home extends Component {
     constructor(props) {

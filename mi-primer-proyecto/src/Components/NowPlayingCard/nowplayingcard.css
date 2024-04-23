@@ -1,7 +1,40 @@
-.NowPlayingCard{
-    width: 10px;
-    height: 15px;
-    margin: 20px;
-    padding: 15px;
-    border-radius: 10px;
-}
+.NowPlayingCard {
+    width: 200px; /* Ancho de la tarjeta */
+    margin-bottom: 20px; /* Espacio entre las tarjetas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Para ocultar el contenido que se desborde */
+  }
+  
+  .NowPlayingCard img {
+    width: 100%; /* Ajustamos la imagen para que ocupe todo el ancho de la tarjeta */
+    height: auto; /* Permitimos que la altura se ajuste automáticamente para mantener la proporción */
+    display: block; /* Aseguramos que la imagen sea un bloque para controlar el margen */
+    border-radius: 8px 8px 0 0; /* Bordes redondeados solo en la parte superior */
+  }
+  
+  .NowPlayingCard h2 {
+    margin: 10px 0; /* Margen alrededor del título */
+    font-size: 16px; /* Tamaño del texto */
+  }
+  
+  .NowPlayingCard button {
+    background-color: #b8bcc0; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 8px 12px; /* Espaciado interno */
+    margin-top: 10px; /* Margen superior */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; 
+    font-size: 14px; /* Tamaño del texto */
+  }
+  
+  .NowPlayingCard button:last-child {
+    background-color:#545755; /* Color de fondo del botón */
+    margin-right: 10px; /* Margen derecho */
+  }
+  
+  .NowPlayingCard button:last-child:hover {
+    background-color: #111211; 
+  }
+  

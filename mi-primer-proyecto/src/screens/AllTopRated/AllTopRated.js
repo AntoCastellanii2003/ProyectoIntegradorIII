@@ -14,7 +14,6 @@ class AllTopRated extends Component {
     render() {
       return (
         <main>
-          <Search history= {this.props.history} />
           <section>
             <h1 className="TitleHome">TOP RATED MOVIES</h1>
               < TodasTopRated />

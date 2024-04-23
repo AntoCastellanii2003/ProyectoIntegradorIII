@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import TodasTopRatedCard from "../TodasTopRatedCard/TodasTopRatedCard";
 import todasTopRated from "./todasTopRated.css";
+import Loader from '../Loader/Loader';
+
 
 class TodasTopRated extends Component {
 
@@ -42,7 +44,7 @@ class TodasTopRated extends Component {
                     {
                         peliculas.length > 0 ?  
                         peliculas.map((elm,idx) => <TodasTopRatedCard  key = {idx + elm.title} datos = {elm} />) :
-                        <h2> Cargando.. </h2>
+                        <h2> <Loader/> </h2>
                     }
                 </div>    
                 <button onClick={() => {

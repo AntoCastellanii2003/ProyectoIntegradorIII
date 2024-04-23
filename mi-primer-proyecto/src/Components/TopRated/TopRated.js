@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import TopRatedCard from "../TopRatedCard/TopRatedCard";
 import "./toprated.css"
+import toprated from "./toprated.css"
+import Loader from "../Loader/Loader";
 
 class TopRated extends Component {
 
@@ -8,7 +10,6 @@ class TopRated extends Component {
         super(props)
         this.state = {
             TopRatedMovies: [],
-            filtro: ""
         }
     }
 
@@ -24,22 +25,17 @@ class TopRated extends Component {
 
     }
 
-    filtro() {
-        let filtradas = this.state.TopRatedMovies.filter(elm => elm.title.toLowerCase().includes(this.state.filtro.toLowerCase()))
-        this.setState({ TopRatedMovies: filtradas })
-    }
-
     render() {
         let cincoPelis = this.state.TopRatedMovies.slice(0, 5)
         console.log(this.state.TopRatedMovies)
         return (
             <>
-                <input onChange={(e) => this.setState({ filtro: e.target.value })} type="text" placeholder="Buscar Pelicula" />
+               
                 <div className="topRated">
                     {cincoPelis.length > 0 ?
                         cincoPelis.map((elm, idx) => <TopRatedCard key={idx + elm.title} datos={elm} />)
                         :
-                        <h2> Cargando.. </h2>}
+                        <h2> <Loader/> </h2>}
                 </div>
             </>
 

@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class NowPlayingCard extends Component {
     constructor(props) {
@@ -41,3 +41,4 @@ class NowPlayingCard extends Component {
 }
 
 export default NowPlayingCard;
+

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
+import "./Favorites.css";
 
 class Favorites extends Component {
     constructor(props) {
@@ -47,15 +48,15 @@ class Favorites extends Component {
 
     render() {
         return(
-            <>
+            <div className="favorites-container">
                 {
                     this.state.listadoFavoritos.length > 0 ?
                         this.state.listadoFavoritos.map((data) => {
                             if (this.state.favorites.includes(data.id.toString())) {
                                 return(
-                                    <article className="topRatedCard">
+                                    <article className="favoritesCard" key={data.id}>
                                         <Link to={`/MovieDetails/id/${data.id}`}>
-                                            <img className="imgcard"src={`https://image.tmdb.org/t/p/w500/${data.poster_path}/images`} alt={data.title}></img>
+                                            <img className="imgcard" src={`https://image.tmdb.org/t/p/w500/${data.poster_path}`} alt={data.title}></img>
                                             <h2>{data.title}</h2>
                                         </Link>
                                         {
@@ -75,7 +76,7 @@ class Favorites extends Component {
                             <p>No hay favoritos</p>
                         </>
                 }
-            </>
+            </div>
         )
     }
 }

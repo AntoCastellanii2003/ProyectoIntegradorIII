@@ -14,7 +14,6 @@ class AllNowPlaying extends Component {
     render() {
       return (
         <main>
-          <Search history= {this.props.history} />
           <section>
             <h1 className="TitleHome">NOW PLAYING</h1>
               < TodasNowPlaying />

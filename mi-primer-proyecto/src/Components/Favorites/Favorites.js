@@ -73,7 +73,6 @@ class Favorites extends Component {
                         }): 
                         <>
                             <p>No hay favoritos</p>
-                            <button onClick={() => {this.print()}}>Boton</button>
                         </>
                 }
             </>

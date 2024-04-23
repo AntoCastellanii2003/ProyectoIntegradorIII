@@ -1,6 +1,7 @@
 /* Resets */
 *{
     box-sizing: border-box;
+
 }
 ul,ol {
     padding: 0;
@@ -16,6 +17,7 @@ body {
     font-family: Nunito;
     margin: 0;
     padding-bottom: 150px;
+    background-color: black;
 }
 
 /* Navigation */

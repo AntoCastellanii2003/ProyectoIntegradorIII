@@ -16,9 +16,8 @@ class AllTopRated extends Component {
         <main>
           <Search history= {this.props.history} />
           <section>
-            <h1 className="TitleHome">NOW PLAYING</h1>
+            <h1 className="TitleHome">TOP RATED MOVIES</h1>
               < TodasTopRated />
-              <button> Cargar Mas</button>
           </section>
         </main>
       );

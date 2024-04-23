@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import TopRated from "../../Components/TopRated/TopRated";
 import NowPlaying from "../../Components/NowPlaying/NowPlaying";
-import home from "./home.css";
 import {Link} from 'react-router-dom'
 import Form from "../../Components/Form/Form";
 

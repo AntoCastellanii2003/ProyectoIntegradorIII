@@ -10,7 +10,6 @@ class SearchCard extends Component{
         }
     }
 
-
     render()
      { 
         console.log(this.props.datos) 

@@ -25,15 +25,6 @@ class Search extends Component{
     }
 
 
-
-  /*   FilterMovies(inputValue){
-        let FilterMovies = this.state.Movies.filter(
-            (elm)=>elm.name.toLowerCase().includes(this.state.inputValue.toLowerCase()))
-            this.setState({
-                MoviesFiltradas: FilterMovies
-            })
-      }  */
-
     render()
      { 
         console.log(this.props.datos) 

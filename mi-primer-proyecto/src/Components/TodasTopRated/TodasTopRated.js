@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import TodasTopRatedCard from "../TodasTopRatedCard/TodasTopRatedCard";
-import todasTopRated from "./todasTopRated.css";
+import  "./todasTopRated.css";
 
 class TodasTopRated extends Component {
 

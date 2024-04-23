@@ -8,7 +8,6 @@ class TopRated extends Component {
         super(props)
         this.state = {
             TopRatedMovies: [],
-            filtro: ""
         }
     }
 
@@ -24,17 +23,12 @@ class TopRated extends Component {
 
     }
 
-    filtro() {
-        let filtradas = this.state.TopRatedMovies.filter(elm => elm.title.toLowerCase().includes(this.state.filtro.toLowerCase()))
-        this.setState({ TopRatedMovies: filtradas })
-    }
-
     render() {
         let cincoPelis = this.state.TopRatedMovies.slice(0, 5)
         console.log(this.state.TopRatedMovies)
         return (
             <>
-                <input onChange={(e) => this.setState({ filtro: e.target.value })} type="text" placeholder="Buscar Pelicula" />
+               
                 <div className="topRated">
                     {cincoPelis.length > 0 ?
                         cincoPelis.map((elm, idx) => <TopRatedCard key={idx + elm.title} datos={elm} />)
